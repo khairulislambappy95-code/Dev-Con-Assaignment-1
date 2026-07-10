@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 24px;
+}
+
+.navbar img {
+    height: 32px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #575757;
+}
+
+.register-btn {
+    padding: 10px 20px;
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: #2563EB;
+    }
+}
+
+.hero-section {
+    background-image: url('/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero-content h1, p {
+    color: #FFFFFF;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+section > h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 48px;
+    color: #111111;
+    text-align: center;
+}
+section .Speaker-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 40px;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 60px 50px;
+}
+
+.Card{
+    border: 1rem;
+    border-color: #111111;
+}
