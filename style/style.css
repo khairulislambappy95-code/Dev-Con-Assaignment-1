@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -45,7 +46,7 @@ header {
 }
 
 .hero-section {
-    background-image: url('./banner.jpg');
+    background-image: url('/banner.jpg');
     background-size: cover;
     background-position: center;
     height: 90vh;
@@ -61,7 +62,8 @@ header {
     text-align: center;
 }
 
-.hero-content h1, p {
+.hero-content h1,
+.hero-content p {
     color: #FFFFFF;
 }
 
@@ -73,7 +75,7 @@ header {
 .hero-content p {
     font-size: 1rem;
     max-width: 600px;
-    margin-bottom: 30px;
+    margin-bottom: 200px;
 }
 section > h2 {
     font-size: 2.25rem;
@@ -89,12 +91,332 @@ section .Speaker-cards{
     column-gap: 50px;
     row-gap: 40px;
     justify-content: center;
-    max-width: 800px;
+    max-width: 1100px;
     margin: auto;
     padding: 60px 50px;
 }
 
-.Card{
-    border: 1rem;
-    border-color: #111111;
+.card {
+    border: 1px solid #868686;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card .expertise,
+.card h3,
+.card p {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.card .expertise {
+    margin-top: 20px;
+    color: #2563EB;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+/* .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: auto;
+    align-items: stretch;
+}
+.price-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.price-card ul {
+    list-style: none;
+    flex: 1;
+    margin: 20px 0;
+}
+
+.price-card li {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+.price-card.featured {
+    
+} */
+
+.pricing {
+    padding: 80px 0;
+    background-color: #f8f9fb;
+}
+
+.pricing h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.pricing .subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 48px;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: auto;
+    align-items: stretch;
+    padding: 0 24px;
+}
+
+.price-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+.plan-price {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #111111;
+}
+
+.plan-per {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.price-card ul {
+    list-style: none;
+    flex: 1;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+    margin-bottom: 24px;
+}
+
+.price-card li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #111111;
+}
+
+.price-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #2563eb;
+}
+
+.btn-outline {
+    padding: 12px 20px;
+    background: transparent;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    color: #111111;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.btn-primary {
+    padding: 12px 20px;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.price-card.featured {
+    background-color: #0f172a;
+    border-color: #0f172a;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.price-card.featured .plan-label,
+.price-card.featured .plan-per {
+    color: #ffffff99;
+}
+
+.price-card.featured .plan-price {
+    color: #ffffff;
+}
+
+.price-card.featured ul {
+    border-top-color: #ffffff26;
+}
+
+.price-card.featured li {
+    color: #ffffff;
+}
+
+.price-card.featured .btn-outline {
+    border-color: #ffffff4d;
+    color: #ffffff;
+}
+
+.price-card.featured .btn-outline:hover {
+    border-color: #ffffff;
+}
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.faq-header h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.faq-header p {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 4px 24px;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.faq-item[open] {
+  border-color: #4361ee;
+}
+
+.faq-question {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #111111;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #4361ee;
+  margin-left: 16px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.faq-item[open] .faq-question::after {
+  content: "−";
+}
+
+.faq-answer {
+  padding: 0 0 20px 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+footer {
+    background-color: #0D1B2A;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 20px 24px;
+}
+
+footer img {
+    height: 24px;
+    width: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    color: #93c5fd;
 }
